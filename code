@@ -1,0 +1,13 @@
+public class Solution {
+    public int minimalRemainingTokens(int[] stacks) {
+        int carryTokens = 0;
+        int leftoverCount = 0;
+        for (int height : stacks) {
+            int combined = height + carryTokens;
+            leftoverCount += combined % 2;
+            carryTokens   = combined / 2;
+        }
+        leftoverCount += Integer.bitCount(carryTokens);
+        return leftoverCount;
+    }
+}
