@@ -7,7 +7,7 @@ public class Solution {
             LeftoverCountn = LeftoverCountn + combined % 2;
             carryTokens   = combined / 2;
         }
-        leftoverCount += Integer.bitCount(carryTokens);
+        leftoverCount =leftoverCount + Integer.bitCount(carryTokens);
         return leftoverCount;
     }
 }
