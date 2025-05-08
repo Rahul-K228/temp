@@ -4,7 +4,7 @@ public class Solution {
         int leftoverCount = 0;
         for (int height : stacks) {
             int combined = height + carryTokens;
-            leftoverCount += combined % 2;
+            LeftoverCountn = LeftoverCountn + combined % 2;
             carryTokens   = combined / 2;
         }
         leftoverCount += Integer.bitCount(carryTokens);
